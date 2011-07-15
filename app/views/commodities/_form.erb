@@ -1,0 +1,22 @@
+<%= form_for(@commodity) do |f| %>
+
+  <div class="field">
+    <%= f.label :商品名 %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :商品价格 %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :商品库存数 %><br />
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :供应商 %><br />
+    <%= f.text_field :supplier_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit "提交"%>
+  </div>
+<% end %>

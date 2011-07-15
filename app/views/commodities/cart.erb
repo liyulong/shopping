@@ -1,0 +1,44 @@
+<h1>购物车</h1>
+<table>
+  <tr>
+    <th></th>
+    <th>商品名</th>
+    <th>供应商</th>
+    <th>商品价格</th>
+    <th>商品库存</th>
+    <th>购买数量</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <%=form_for :commodity,:url=>"/suppliers/cart_buy",:html=>{:onsubmit=> 'return check()'} do %>
+    <% if @commodities==nil %>
+      <font color ="red"><%= "您的购物车还没有任何商品哦!" %></font>
+    <%else%>
+      <% @commodities.each do |commodity| %>
+        <tr>
+          <td><input type="checkbox" name="check_b" value="<%= commodity.id %>" onclick="javascript:checkone()" /></td>
+          <td><%= commodity.name %></td>
+          <td><%= commodity.supplier.name %></td>
+          <td><%= commodity.price %></td>
+          <td><label id="commodity_value<%=commodity.id  %>" ><%= commodity.amount %></label></td>
+          <td><input value="1" id="number<%= commodity.id %>" name="number<%= commodity.id %>"size="1" onblur="javascript:checkone()" /></td>
+          <td><input type="hidden" id="amount<%= commodity.id %>"value="<%= commodity.amount %>"/></td>
+          <td><%= link_to"购买","javascript:void(0)",
+              :onclick =>"javascript:get_package('#{commodity.id}');" %></td>
+        </tr>
+      <%end%>
+      <tr>
+      <input type="hidden" id="commodity_id" name="commodity_id" value="" />
+      <td><input type="checkbox" name="check_box" onclick=sltall(this.checked) />&nbsp;&nbsp;全选</td>
+    </tr>
+    <td><input type="submit" value="批量购买" /></td>
+
+  <%end%>
+
+<%end%>
+<tr><td><%= button_to "清空购物车",:action=>:empty_cart %></td></tr>
+</table>
+
+
+<%= link_to "继续购物", "/commodities" %>

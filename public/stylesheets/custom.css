@@ -1,0 +1,131 @@
+.container {
+    margin: 0 auto;
+    width: 900px;
+}
+body {
+    background: #cff;
+}
+.header {
+    padding-top: 10px;
+    /*border: 4px solid #ccc;*/
+}
+header img {
+    padding:1em;
+    background: #fff;
+}
+.section {
+    margin-top: 1em;
+    font-size: 130%;
+    padding: 20px;
+
+}
+section h1 {
+    font-size: 200%;
+}
+/* Links */
+a {
+    color: #09c;
+    text-decoration: none;
+}
+a:hover {
+    color: #069;
+    text-decoration: underline;
+}
+a:visited {
+    color: #069;
+}
+
+/* Navigation */
+nav {
+    float: right;
+}
+nav {
+    background-color: white;
+    padding: 0 0.7em;
+    white-space: nowrap;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.2em 0;
+}
+nav ul li a {
+    padding: 0 5px;
+    font-weight: bold;
+}
+nav ul li a:visited {
+    color: #09c;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Sign up button */
+a.signup_button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    width: 190px;
+    color: #fff;
+    background: #006400;
+    font-size: 150%;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* Round corners */
+.round {
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+
+    margin-bottom:50px;
+    margin-top: 0px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.field {
+    padding-bottom: 10px;
+}
+
+.actions {
+    padding-bottom: 30px;
+}
+
+.my_app {
+
+    text-align: center;
+    width: 100%;
+}
+.user_info {
+    float: left;
+    width: 50%;
+}
+.posts_info {
+    float: left;
+    width: 69%;
+}
+.clear {
+	clear:both;
+}
+.microposts{
+    magin-top: 10px;
+}
+html{
+    background:#FFF url(/images/biz_page_bg_back.gif) repeat-x;
+    overflow-y:scroll;
+}
+
+
+
